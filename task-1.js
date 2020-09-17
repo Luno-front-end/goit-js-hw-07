@@ -1,0 +1,10 @@
+const valueCategEl = document.querySelectorAll(".item").length;
+console.log(`У списку ${valueCategEl} категорії`);
+const headingEl = document.querySelectorAll("h2");
+console.log("Категорія:", headingEl[0].textContent);
+const el = document.querySelectorAll(".item");
+console.log("Кількість елементів:", el[0].querySelectorAll("li").length);
+console.log("Категорія:", headingEl[1].textContent);
+console.log("Кількість елементів:", el[1].querySelectorAll("li").length);
+console.log("Категорія:", headingEl[2].textContent);
+console.log("Кількість елементів:", el[2].querySelectorAll("li").length);
