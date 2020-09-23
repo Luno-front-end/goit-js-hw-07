@@ -1,10 +1,12 @@
-const valueCategEl = document.querySelectorAll(".item").length;
-const headingEl = document.querySelectorAll("h2");
-const valueEl = document.querySelectorAll(".item");
-console.log(`У списку ${valueCategEl} категорії`);
-console.log("Категорія:", headingEl[0].textContent);
-console.log("Кількість елементів:", valueEl[0].querySelectorAll("li").length);
-console.log("Категорія:", headingEl[1].textContent);
-console.log("Кількість елементів:", valueEl[1].querySelectorAll("li").length);
-console.log("Категорія:", headingEl[2].textContent);
-console.log("Кількість елементів:", valueEl[2].querySelectorAll("li").length);
+const itemEl = document.querySelectorAll(".item");
+
+console.log(`У списку ${itemEl.length} категорії`);
+
+function textValue(head) {
+  const headingEl = head.querySelector("h2");
+  const valueEl = head.querySelectorAll(".item li");
+
+  console.log(`Категорія: ${headingEl.textContent}`);
+  console.log(`Кількість елементів: ${valueEl.length}`);
+}
+itemEl.forEach(textValue);
